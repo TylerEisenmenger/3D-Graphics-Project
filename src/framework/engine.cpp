@@ -93,12 +93,26 @@ void Engine::processInput() {
   // Rotating the cube up rotates around the x-axis, so we update rotateX
   if (keys[GLFW_KEY_UP])
       rotateX += 0.1f;
-  // TODO: Complete rotation with other three arrow keys
-
-  // TODO: When the user presses g, move the camera forward
+  //Complete rotation with other three arrow keys
+  if (keys[GLFW_KEY_DOWN])
+      rotateX += -0.1f;
+  // Rotating the cube up rotates around the y-axis, so we update rotateY
+  if (keys[GLFW_KEY_LEFT])
+      rotateY += 0.1f;
+  if (keys[GLFW_KEY_RIGHT])
+      rotateY += -0.1f;
+  //When the user presses g, move the camera forward
   //       to make the cube appear bigger
-  // TODO: When the user presses s, move the camera backward
+  if (keys[GLFW_KEY_G]) {
+      // Move the camera forward to make the cube appear bigger
+      cameraZ += 0.1f;
+  }
+  //When the user presses s, move the camera backward
   //       to make the cube appear smaller
+  if (keys[GLFW_KEY_S]) {
+      // Move the camera forward to make the cube appear bigger
+      cameraZ += -0.1f;
+  }
 }
 
 void Engine::update() {
@@ -123,8 +137,8 @@ void Engine::render() {
 
   // Rotate cube if arrow keys are pressed
   model = glm::rotate(model, rotateX, glm::vec3(1.0f, 0.0f, 0.0f));
-  // TODO: rotate the model matrix around the y axis
-
+  //rotate the model matrix around the y axis
+  model = glm::rotate(model, rotateY, glm::vec3(0.0f, 1.0f, 0.0f));
   // Move the camera back 3 units to view the cube (otherwise we would be inside
   // it)
   view = glm::translate(view, glm::vec3(0.0f, 0.0f, cameraZ));

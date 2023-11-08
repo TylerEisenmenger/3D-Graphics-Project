@@ -39,25 +39,33 @@ void Cube::initVectors() {
             -0.5f,  0.5f,  0.5f, 1.0f, 1.0f, 0.0f, // Top left, yellow
              0.5f, -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Bottom right, green
             -0.5f, -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Bottom left, red
-            // TODO: add vertices for the back face
             // Back face
-            // Top right, white
-            // Top left, gray
-            // Bottom right, cyan
-            // Bottom left, magenta
+            -0.5f,  0.5f, -0.5f, 1.0f, 1.0f, 1.0f, // Top right, white
+            0.5f,  0.5f, -0.5f, 0.5f, 0.5f, 0.5f, // Top left, gray
+            -0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, // Bottom right, cyan
+            0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 1.0f, // Bottom left, magenta
     });
 
     this->indices.insert(this->indices.end(), {
         // Each face lists the indices of the vertices as two triangles
-        // TODO: complete the other five faces
             // Front face
             0, 1, 2,
             2, 3, 1,
             // Right face
+            0, 7, 2,
+            7, 5, 0,
             // Back face
+            4, 5, 6,
+            6, 7, 5,
             // Left face
+            1, 4, 3,
+            3, 6, 4,
             // Bottom face
+            3, 6, 2,
+            2, 7, 6,
             // Top face
+            0, 5, 1,
+            1, 4, 5,
     });
 }
 
