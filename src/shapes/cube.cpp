@@ -35,9 +35,9 @@ void Cube::initVectors() {
     this->vertices.insert(this->vertices.end(), {
             // Each row contains x, y, z, r, g, b values for position and color
             // Front face
-             0.5f,  0.5f,  0.5f, 0.0f, 0.0f, 1.0f, // Top right, blue
+            0.5f,  0.5f,  0.5f, 0.0f, 0.0f, 1.0f, // Top right, blue
             -0.5f,  0.5f,  0.5f, 1.0f, 1.0f, 0.0f, // Top left, yellow
-             0.5f, -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Bottom right, green
+            0.5f, -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Bottom right, green
             -0.5f, -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Bottom left, red
             // Back face
             -0.5f,  0.5f, -0.5f, 1.0f, 1.0f, 1.0f, // Top right, white
@@ -47,7 +47,7 @@ void Cube::initVectors() {
     });
 
     this->indices.insert(this->indices.end(), {
-        // Each face lists the indices of the vertices as two triangles
+            // Each face lists the indices of the vertices as two triangles
             // Front face
             0, 1, 2,
             2, 3, 1,
