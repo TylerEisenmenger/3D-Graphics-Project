@@ -1,5 +1,6 @@
 # 3D-Graphics
-This project was part of an advanced rogramming course where partial code was provided and we were tasked to finish the code
+This project was part of an advanced rogramming course where partial code was provided and we were tasked to finish the code.
+
 The code that was authored by myself can be found in cube.cpp and engine.cpp and relates to the actions stated below.
 
 This program draws a 6 sided cube and allows the user to rotate it as well as zoom in and out.
