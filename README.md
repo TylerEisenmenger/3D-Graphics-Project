@@ -11,3 +11,6 @@ The starter code only allowed for the cube to be rotated in one direction. I add
 
 # Moving the camera
 Added code to allow the zooming in and out of the camera with the keys (g) and (s).
+
+# Citations
+Starter code provided by Lisa Dion a Lecturer of Computer Science at the University of Vermont
